@@ -8,14 +8,14 @@
 class Solution {
 public:
     int findLucky(vector<int>& arr) {
-        int n=0;
         map<int, int> frequency_arr;
+        int n=-1;
         for(int i=0;i<arr.size();i++){
             frequency_arr[arr[i]]++;
         }
-        for(auto it = frequency_arr.begin(); it != frequency_arr.end(); it++) {
-            if(n<it->first&&it->first==it->second){
-                n=it->first;
+        for(auto [key,val]:frequency_arr){
+            if(n<val&&val==key){
+                n=val;
             }
         }
         if(n==0){
