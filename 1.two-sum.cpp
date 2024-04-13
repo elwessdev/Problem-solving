@@ -8,6 +8,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
+        // Hash Table
         std::map<int,int> sum;
         int sz=nums.size();
         for(int i=0;i<sz;i++){
