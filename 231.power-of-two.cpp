@@ -17,11 +17,11 @@ public:
     //     return recFun(n,p+1);
     // }
     bool isPowerOfTwo(int n) {
-        // return recFun(n,0);
         if(n==1) return true;
         if(n%2==1) return false;
         if(n<1) return false;
         return isPowerOfTwo(n/2);
+        // return recFun(n,0);
     }
 };
 // @lc code=end
