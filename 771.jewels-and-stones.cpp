@@ -8,6 +8,7 @@
 class Solution {
 public:
     int numJewelsInStones(string jewels, string stones) {
+        // Testing
         unordered_map<char,int> hashTable;
         int sum=0;
         for(auto st:stones) hashTable[st]++;
