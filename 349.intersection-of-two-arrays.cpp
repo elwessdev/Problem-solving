@@ -13,8 +13,8 @@ public:
         for(auto n:nums1) hashSet.insert(n);
         for(auto n:nums2){
             if(hashSet.find(n) != hashSet.end()){
-            res.push_back(n);
-            hashSet.erase(hashSet.find(n));
+                res.push_back(n);
+                hashSet.erase(hashSet.find(n));
             }
         }
         return res;
