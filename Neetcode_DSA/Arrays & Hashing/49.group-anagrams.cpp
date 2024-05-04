@@ -8,19 +8,14 @@
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        map<string,vector<string>> hmp;
         vector<vector<string>>ans;
-        map<string,vector<int>> hmp;
-        for(int i=0;i<strs.size();i++){
-            string sstr=strs[i];
+        for(auto str:strs){
+            string sstr=str;
             sort(sstr.begin(),sstr.end());
-            hmp[sstr].push_back(i);
+            hmp[sstr].push_back(str);
         }
-        for (const auto& pair:hmp) {
-            vector<string>tempAns;
-            for (int idx:pair.second) tempAns.push_back(strs[idx]);
-            ans.push_back(tempAns);
-            tempAns.clear();
-        }
+        for (const auto& pair:hmp) ans.push_back(pair.second);
         return ans;
     }
 };
