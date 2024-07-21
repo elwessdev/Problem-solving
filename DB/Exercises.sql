@@ -1,3 +1,5 @@
+--https://github.com/WebDevSimplified/Learn-SQL
+
 CREATE DATABASE record_company;
 USE record_company;
 
